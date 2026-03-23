@@ -4,59 +4,83 @@
 // ============================================================
 
 export const siteConfig = {
-  name: "Rodolphe Oppenheimer",
-  title: "Rodolphe Oppenheimer — Accompagnement de situations complexes",
+  name: "Rodolphe Oppenheimer-Faure",
+  title: "Accompagnement de situations complexes et sensibles",
   description:
-    "Conseil, structuration et intervention sur des dossiers nécessitant une approche stratégique et discrète.",
-  email: "contact@edgarfaure.fr",
-  telephone: "",
+    "Conseil, structuration et intervention sur des dossiers bloqués ou difficiles à faire évoluer.",
 };
 
 // ─── PAGE ACCUEIL ────────────────────────────────────────────
 export const accueil = {
   hero: {
     label: "Accompagnement stratégique",
-    titre: "Certaines situations exigent plus qu'une simple",
-    titreAccent: "démarche administrative",
+    titre: "Accompagnement de situations",
+    titreAccent: "complexes et sensibles",
     sousTitre:
-      "Elles exigent une compréhension exigeante des institutions et de leurs logiques.",
+      "Conseil, structuration et intervention sur des dossiers bloqués ou difficiles à faire évoluer.",
     description:
-      "Conseil, structuration et intervention sur des dossiers nécessitant une approche stratégique et discrète.",
+      "Lorsqu'une situation s'enlise, devient illisible ou reste sans réponse, une approche classique ne suffit plus. Nous intervenons pour analyser, structurer et définir une stratégie adaptée à chaque contexte.",
     cta: "Soumettre une demande",
+  },
+
+  concerne: {
+    label: "Êtes-vous concerné ?",
+    titre: "Nous intervenons notamment lorsque :",
+    items: [
+      "Un dossier reste bloqué sans explication claire",
+      "Les démarches n'aboutissent pas malgré plusieurs tentatives",
+      "Une décision est difficile à comprendre ou à contester",
+      "Plusieurs interlocuteurs rendent la situation confuse",
+      "Aucune stratégie claire n'a encore été définie",
+    ],
   },
 
   positionnement: {
     label: "Positionnement",
-    titre:
-      "Chaque situation est unique et appelle une réponse adaptée.",
+    titre: "Chaque situation est unique et appelle une réponse adaptée.",
     texte:
-      "Mon intervention s'inscrit dans une logique de compréhension fine et d'efficacité concrète.",
+      "Notre intervention s'inscrit dans une logique de compréhension fine et d'efficacité concrète.",
   },
 
-  domaines: {
-    label: "Domaines d'intervention",
-    titre: "Ce que j'apporte",
+  apports: {
+    label: "Ce que nous apportons",
     items: [
+      "Une vision globale de la situation",
+      "Une identification des blocages réels",
+      "Une structuration claire du dossier",
+      "Une stratégie adaptée au contexte",
+      "Un accompagnement ciblé dans les démarches",
+    ],
+  },
+
+  commentNousIntervenons: {
+    label: "Comment nous intervenons",
+    etapes: [
       {
-        titre: "Une vision globale de la situation",
-        texte:
-          "Dossiers complexes ou bloqués, enjeux multiples, interlocuteurs difficiles à mobiliser.",
+        titre: "Analyse confidentielle de la situation",
+        texte: "Prise de contact et évaluation initiale de votre demande.",
       },
       {
-        titre: "Une capacité à identifier les leviers pertinents",
-        texte:
-          "Situations nécessitant une relecture stratégique et une structuration claire.",
+        titre: "Diagnostic des enjeux et des blocages",
+        texte: "Lecture approfondie de la situation et identification des freins.",
       },
       {
-        titre: "Une structuration claire des enjeux",
-        texte:
-          "Difficultés dans les relations avec certaines institutions, absence de réponse ou incompréhension d'une décision.",
+        titre: "Proposition d'une stratégie adaptée",
+        texte: "Définition d'une ligne d'action claire et réaliste.",
       },
       {
-        titre: "Une orientation efficace dans les démarches",
-        texte:
-          "Démarches nécessitant une structuration claire, contextes sensibles impliquant plusieurs interlocuteurs.",
+        titre: "Accompagnement si pertinent",
+        texte: "Appui dans les démarches et leur organisation.",
       },
+    ],
+  },
+
+  pourQui: {
+    label: "Pour qui",
+    items: [
+      "Particuliers confrontés à une situation complexe",
+      "Professionnels ou dirigeants",
+      "Situations impliquant des institutions ou des environnements multiples",
     ],
   },
 
@@ -81,43 +105,65 @@ export const accueil = {
     ],
   },
 
+  selectivite: {
+    texte:
+      "Les interventions sont limitées à un nombre restreint de situations, afin de garantir un suivi rigoureux.",
+  },
+
+  cadre: {
+    texte:
+      "Notre intervention consiste en un travail de conseil, d'analyse et d'accompagnement. Elle ne se substitue pas aux décisions des institutions concernées et ne constitue pas une activité juridique.",
+  },
+
+  dimensionImplicite: {
+    texte:
+      "Une bonne compréhension des environnements décisionnels permet souvent de rétablir des situations qui semblaient figées.",
+  },
+
   ctaFinal: {
     titre: "Certaines situations nécessitent d'être abordées",
     titreAccent: "autrement",
     cta: "Soumettre une demande confidentielle",
-    phraseFinale:
-      "Comprendre les institutions, c'est déjà commencer à résoudre ce qui semble bloqué.",
   },
 };
 
-// ─── PAGE QUI JE SUIS ────────────────────────────────────────
-export const quiJeSuis = {
-  label: "Qui je suis",
-  titre: "Rodolphe Oppenheimer",
-  sousTitre: "Président fondateur de l'Association Edgar Faure",
+// ─── PAGE QUI SOMMES-NOUS ────────────────────────────────────
+export const quiSommesNous = {
+  label: "Qui sommes-nous",
+  titre: "Notre parcours",
   paragraphes: [
-    "Mon parcours m'a conduit à intervenir dans des environnements variés, souvent complexes, où les situations nécessitent à la fois compréhension, méthode et capacité d'adaptation.",
-    "Mon expérience, notamment au sein d'environnements publics et institutionnels, me permet d'aborder ces situations avec une compréhension concrète des circuits, des équilibres et des logiques décisionnelles.",
-    "Au fil du temps, j'ai développé une approche fondée sur l'analyse globale des situations, la clarté des enjeux et la recherche de solutions concrètes.",
-    "Je privilégie une méthode discrète, rigoureuse et orientée vers l'efficacité, adaptée à chaque situation.",
+    "En tant que président de l'Association Edgar Faure, fondateur et organisateur du Prix Edgar Faure, nous avons structuré et développé, sur plus de vingt années, une dynamique réunissant des personnalités issues d'univers très différents : députés, sénateurs, maires, membres de gouvernements, responsables institutionnels, journalistes, intellectuels, avocats, chefs d'entreprise et capitaines d'industrie.",
+    "Au fil des éditions, le Prix a distingué et réuni des auteurs et des personnalités de premier plan issus de la vie publique, politique, intellectuelle et économique.",
+    "Ce travail s'est inscrit dans un cadre institutionnel et collectif, au croisement d'environnements où se prennent et s'élaborent des décisions importantes.",
   ],
-  heritage: {
-    titre: "Dans le sillage du Président Edgar Faure",
+  experience: {
+    titre: "Une compréhension concrète des mécanismes décisionnels",
     texte:
-      "Mon approche s'inscrit dans une tradition d'exigence et de compréhension des institutions, dans le sillage du Président Edgar Faure. Cet héritage se prolonge aujourd'hui à travers le Prix Edgar Faure et les travaux de l'Association Edgar Faure, qui contribuent à faire vivre une réflexion exigeante sur l'État, ses évolutions et ses mécanismes.",
+      "Cette expérience nous a permis de comprendre de manière concrète les mécanismes décisionnels, les équilibres institutionnels et les logiques d'acteurs qui structurent les situations complexes. Elle nourrit aujourd'hui notre capacité à analyser les situations avec précision, à en identifier les blocages réels et à proposer des stratégies adaptées, qu'il s'agisse de situations individuelles ou de contextes plus institutionnels.",
   },
-  distinctions: [
-    "Ancien Élu",
-    "Chevalier de l'Ordre National du Mérite",
-    "Officier des Palmes Académiques",
-    "Officier de l'Ordre du Mérite Agricole",
-    "Chevalier de l'Ordre des Arts et des Lettres",
-    "Médaille d'Or de l'Étoile Civique — soutenue par l'Académie Française",
-    "La Renaissance Française",
-    "Membre de la Société des Gens de Lettres",
-  ],
-  signature:
-    "C'est dans cet esprit que j'interviens, avec rigueur, discrétion et précision, sur des situations administratives nécessitant une lecture approfondie.",
+  mandats: {
+    titre: "Engagement public",
+    paragraphes: [
+      "Notre parcours inclut également un engagement public, avec deux mandats électifs dans les Hauts-de-Seine.",
+      "Nous y avons exercé les fonctions de maire adjoint, délégué à la démocratie locale, à la médiation et à l'Observatoire de la laïcité.",
+      "Nous avons également eu en charge la gestion d'un guichet unique, avec pour mission de traiter et débloquer des situations administratives complexes, souvent restées sans solution.",
+    ],
+  },
+  distinctions: {
+    titre: "Reconnaissances et engagements",
+    sousTitre: "Rodolphe Oppenheimer-Faure",
+    items: [
+      "Chevalier de l'Ordre national du Mérite",
+      "Officier de l'Ordre des Palmes académiques",
+      "Officier de l'Ordre du Mérite agricole",
+      "Chevalier de l'Ordre des Arts et des Lettres",
+      "Commandeur de l'Étoile de Mohéli",
+      "Médaille d'or de l'Étoile civique (soutenue par l'Académie française)",
+      "Membre de la Société des gens de lettres",
+      "Membre de La Renaissance française",
+      "Membre de la SACEM",
+    ],
+  },
 };
 
 // ─── PAGE APPROCHE & RÉSEAU ──────────────────────────────────
@@ -125,11 +171,11 @@ export const approcheReseau = {
   label: "Approche & réseau",
   titre: "Certaines situations ne se règlent pas seules.",
   intro:
-    "Elles demandent à être comprises, structurées… et parfois abordées autrement. Mon travail consiste à analyser chaque situation dans sa globalité et à construire, lorsque c'est nécessaire, une réponse adaptée en m'appuyant sur les bonnes compétences.",
+    "Elles demandent d'être comprises, structurées… et parfois abordées autrement. Notre travail consiste à analyser chaque situation dans sa globalité et à construire, lorsque c'est nécessaire, une réponse adaptée en nous appuyant sur les bonnes compétences.",
   reseau: {
     titre: "Un réseau de compétences complémentaires",
     texte:
-      "Au fil du temps, j'ai développé des relations de travail avec des professionnels issus de différents univers :",
+      "Au fil du temps, nous avons développé des relations de travail avec des professionnels issus de différents univers :",
     domaines: [
       "Conseil",
       "Accompagnement stratégique",
@@ -142,36 +188,79 @@ export const approcheReseau = {
   collaborateurs: {
     titre: "Extension collaborateurs",
     texte:
-      "Certaines situations plus simples ou plus opérationnelles peuvent également être prises en charge dans ce cadre. Je m'appuie alors sur des collaborateurs de confiance, avec lesquels je travaille régulièrement, afin d'assurer un suivi sérieux, structuré et adapté à chaque dossier.",
+      "Certaines situations plus simples ou plus opérationnelles peuvent également être prises en charge dans ce cadre. Nous nous appuyons alors sur des collaborateurs de confiance, avec lesquels nous travaillons régulièrement, afin d'assurer un suivi sérieux, structuré et adapté à chaque dossier.",
   },
   signature:
     "L'essentiel n'est pas seulement de comprendre une situation, mais de savoir comment la faire évoluer.",
 };
 
-// ─── PAGE CE QUE JE FAIS ─────────────────────────────────────
-export const ceQueJeFais = {
-  label: "Ce que je fais",
-  titre: "Mes domaines d'intervention",
+// ─── PAGE CE QUE NOUS FAISONS ────────────────────────────────
+export const ceQueNousFaisons = {
+  label: "Ce que nous faisons",
+  titre: "Nos domaines d'intervention",
   items: [
-    "Analyse de situations complexes",
-    "Identification des blocages",
-    "Structuration de dossiers",
-    "Conseil stratégique",
-    "Accompagnement dans les démarches",
-    "Coordination d'interventions si nécessaire",
+    {
+      titre: "Analyse de situation",
+      texte: "Évaluation globale du dossier, des enjeux et des marges d'action.",
+    },
+    {
+      titre: "Identification des blocages",
+      texte: "Repérage des freins, incohérences ou obstacles.",
+    },
+    {
+      titre: "Structuration du dossier",
+      texte: "Organisation claire des éléments et des priorités.",
+    },
+    {
+      titre: "Conseil stratégique",
+      texte: "Définition d'une ligne d'action adaptée.",
+    },
+    {
+      titre: "Accompagnement",
+      texte: "Appui dans les démarches et leur organisation.",
+    },
+    {
+      titre: "Coordination",
+      texte: "Mobilisation de compétences complémentaires si nécessaire.",
+    },
   ],
-  note: "Ces situations peuvent relever de domaines administratifs, institutionnels ou professionnels, selon les cas.",
+  methode: {
+    titre: "Méthode",
+    etapes: [
+      {
+        num: "1",
+        titre: "Prise de contact confidentielle",
+        texte: "Analyse initiale de la demande.",
+      },
+      {
+        num: "2",
+        titre: "Étude du dossier",
+        texte: "Lecture approfondie de la situation.",
+      },
+      {
+        num: "3",
+        titre: "Diagnostic",
+        texte: "Identification des enjeux et des possibilités réelles.",
+      },
+      {
+        num: "4",
+        titre: "Orientation",
+        texte: "Proposition d'un accompagnement si pertinent.",
+      },
+    ],
+    note: "Toutes les situations ne donnent pas lieu à une intervention.",
+  },
 };
 
 // ─── PAGE SITUATIONS ACCOMPAGNÉES ────────────────────────────
 export const situations = {
   label: "Situations accompagnées",
-  titre: "Types de situations prises en charge",
+  titre: "Nous intervenons notamment dans les situations suivantes",
   items: [
     "Dossier en attente prolongée",
     "Situation bloquée malgré plusieurs démarches",
     "Décision difficile à comprendre",
-    "Dossier incomplet ou mal structuré",
+    "Dossier mal structuré",
     "Environnement complexe ou peu lisible",
     "Besoin d'une stratégie avant d'agir",
   ],
@@ -182,14 +271,8 @@ export const soumettredemande = {
   label: "Soumettre une demande",
   titre: "Soumettre une demande confidentielle",
   texte:
-    "Chaque demande fait l'objet d'une première analyse confidentielle. Cette étape permet d'évaluer :",
-  criteres: [
-    "La nature de la situation",
-    "Les possibilités réelles d'évolution",
-    "La pertinence d'un accompagnement",
-  ],
-  message:
-    "Une réponse vous sera apportée dans les meilleurs délais.",
+    "Chaque demande fait l'objet d'une première analyse confidentielle. Cette étape permet d'évaluer la nature de la situation et la pertinence d'un accompagnement. Toutes les demandes ne donnent pas lieu à une intervention.",
+  message: "Une réponse vous sera apportée dans les meilleurs délais.",
   formulaire: {
     nom: "Nom",
     email: "Email",
@@ -210,17 +293,17 @@ export const faq = {
     {
       question: "Garantissez-vous un résultat ?",
       reponse:
-        "Non. Chaque situation dépend de nombreux paramètres. Mon rôle est de structurer, analyser et orienter — jamais de promettre un résultat spécifique.",
+        "Non. Chaque situation dépend de nombreux paramètres. Notre rôle est de structurer, analyser et orienter — jamais de promettre un résultat spécifique.",
     },
     {
       question: "Êtes-vous avocat ?",
       reponse:
-        "Non. Mon rôle est un accompagnement et un travail de conseil. Je ne fournis pas de conseils juridiques et ne me substitue pas aux professionnels du droit.",
+        "Non. Notre rôle est un accompagnement et un travail de conseil. Nous disposons d'un vivier d'avocats tous spécialisés dans leurs matières, car on ne peut pas être avocat et tout faire : chacun a un scope précis.",
     },
     {
       question: "Intervenez-vous auprès des institutions ?",
       reponse:
-        "Mon travail consiste à analyser, structurer et orienter les situations dans un cadre adapté. Je ne fais pas de lobbying ni de représentation directe.",
+        "Notre travail consiste à analyser, structurer et orienter les situations dans un cadre adapté, puis à intervenir lorsque cela est pertinent.",
     },
   ],
 };
@@ -230,14 +313,12 @@ export const contactPage = {
   label: "Contact",
   titre: "Prendre contact",
   texte:
-    "Pour toute demande d'information ou pour soumettre une situation, vous pouvez me contacter par les moyens suivants.",
-  email: "contact@edgarfaure.fr",
-  telephone: "",
+    "Pour toute demande d'information ou pour soumettre une situation, vous pouvez nous contacter par les moyens suivants.",
 };
 
 // ─── PAGE MENTIONS LÉGALES ───────────────────────────────────
 export const mentionsLegales = {
   label: "Mentions légales",
   titre: "Mentions légales",
-  contenu: "(À compléter par le client)",
+  contenu: "(À compléter)",
 };

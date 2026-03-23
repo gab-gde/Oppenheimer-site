@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Left */}
           <div>
             <p className="font-serif text-lg font-medium text-charcoal mb-2">
-              Rodolphe Oppenheimer
+              Rodolphe Oppenheimer-Faure
             </p>
             <p className="text-xs text-subtle tracking-wider">
               Président fondateur de l&apos;Association Edgar Faure
@@ -22,7 +22,7 @@ export default function Footer() {
               href="/qui-je-suis"
               className="text-xs tracking-wider uppercase text-muted hover:text-charcoal transition-colors"
             >
-              Qui je suis
+              Qui sommes-nous
             </Link>
             <Link
               href="/approche-reseau"
@@ -60,7 +60,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 border-t border-charcoal/10 flex flex-col lg:flex-row justify-between items-center gap-4">
           <p className="text-[11px] text-subtle">
-            © {new Date().getFullYear()} Rodolphe Oppenheimer — Tous droits
+            © {new Date().getFullYear()} Rodolphe Oppenheimer-Faure — Tous droits
             réservés
           </p>
           <p className="text-[11px] text-subtle">

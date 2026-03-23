@@ -4,15 +4,15 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Rodolphe Oppenheimer — Accompagnement de situations complexes",
+  title: "Rodolphe Oppenheimer-Faure — Accompagnement de situations complexes",
   description:
-    "Conseil, structuration et intervention sur des dossiers nécessitant une approche stratégique et discrète. Dans le sillage du Président Edgar Faure.",
+    "Conseil, structuration et intervention sur des dossiers bloqués ou difficiles à faire évoluer.",
   keywords:
     "accompagnement, situations complexes, institutions, conseil stratégique, dossiers bloqués, Edgar Faure",
   openGraph: {
-    title: "Rodolphe Oppenheimer — Accompagnement de situations complexes",
+    title: "Rodolphe Oppenheimer-Faure — Accompagnement de situations complexes",
     description:
-      "Conseil, structuration et intervention sur des dossiers nécessitant une approche stratégique et discrète.",
+      "Conseil, structuration et intervention sur des dossiers bloqués ou difficiles à faire évoluer.",
     type: "website",
   },
 };

@@ -2,8 +2,9 @@ import Link from "next/link";
 import { contactPage } from "@/lib/content";
 
 export const metadata = {
-  title: "Contact — Rodolphe Oppenheimer",
-  description: "Prenez contact pour soumettre une situation ou obtenir des informations.",
+  title: "Contact — Rodolphe Oppenheimer-Faure",
+  description:
+    "Prenez contact pour soumettre une situation ou obtenir des informations.",
 };
 
 export default function ContactPageView() {
@@ -29,13 +30,7 @@ export default function ContactPageView() {
           <div className="p-8 border border-charcoal/10 relative">
             <div className="absolute top-0 left-0 w-10 h-0.5 bg-gold" />
             <div className="w-10 h-10 border border-gold/30 rounded-full flex items-center justify-center mb-4">
-              <svg
-                className="w-4 h-4 text-gold"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              >
+              <svg className="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <path d="M22 6l-10 7L2 6" />
               </svg>
@@ -43,25 +38,16 @@ export default function ContactPageView() {
             <p className="text-xs text-muted uppercase tracking-wider mb-2">
               Email
             </p>
-            <a
-              href={`mailto:${contactPage.email}`}
-              className="text-sm font-medium hover:text-gold transition-colors"
-            >
-              {contactPage.email}
-            </a>
+            <p className="text-sm font-medium text-subtle italic">
+              (à préciser)
+            </p>
           </div>
 
           {/* Formulaire */}
           <div className="p-8 border border-charcoal/10 relative">
             <div className="absolute top-0 left-0 w-10 h-0.5 bg-gold" />
             <div className="w-10 h-10 border border-gold/30 rounded-full flex items-center justify-center mb-4">
-              <svg
-                className="w-4 h-4 text-gold"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              >
+              <svg className="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
                 <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
               </svg>

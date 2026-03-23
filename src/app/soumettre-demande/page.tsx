@@ -66,25 +66,16 @@ export default function SoumettredemandePage() {
           <h1 className="font-serif text-3xl lg:text-5xl font-normal text-white mb-6">
             {soumettredemande.titre}
           </h1>
-          <p className="text-sm text-white/50 max-w-lg leading-relaxed">
-            {soumettredemande.texte}
-          </p>
         </div>
       </section>
       <div className="gold-line" />
 
       <section className="max-w-2xl mx-auto px-6 lg:px-12 py-16 lg:py-24">
-        {/* Critères */}
+        {/* Info */}
         <div className="mb-12 p-6 bg-section border-l-2 border-gold">
-          <p className="text-xs text-muted uppercase tracking-wider mb-3">
-            Cette première analyse évalue :
+          <p className="text-sm text-muted leading-[1.8]">
+            {soumettredemande.texte}
           </p>
-          {soumettredemande.criteres.map((c, i) => (
-            <div key={i} className="flex items-center gap-2 mb-1.5">
-              <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-              <p className="text-sm text-muted">{c}</p>
-            </div>
-          ))}
         </div>
 
         {/* Form */}

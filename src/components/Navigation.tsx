@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 
 const links = [
-  { href: "/qui-je-suis", label: "Qui je suis" },
+  { href: "/qui-je-suis", label: "Qui sommes-nous" },
   { href: "/approche-reseau", label: "Approche" },
-  { href: "/ce-que-je-fais", label: "Interventions" },
+  { href: "/ce-que-je-fais", label: "Ce que nous faisons" },
   { href: "/situations", label: "Situations" },
   { href: "/faq", label: "FAQ" },
 ];
@@ -22,7 +22,7 @@ export default function Navigation() {
           href="/"
           className="font-serif text-sm lg:text-base font-medium tracking-[0.2em] uppercase text-charcoal"
         >
-          R. Oppenheimer
+          R. Oppenheimer-Faure
         </Link>
 
         {/* Desktop links */}
