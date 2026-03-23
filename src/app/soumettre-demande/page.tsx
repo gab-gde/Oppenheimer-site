@@ -204,7 +204,7 @@ export default function SoumettredemandePage() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="w-full text-xs tracking-[0.15em] uppercase py-4 bg-sand/60 text-cream hover:bg-accent transition-colors duration-300 disabled:opacity-50"
+                className="w-full text-xs tracking-[0.15em] uppercase py-4 bg-charcoal text-cream hover:bg-oak transition-colors duration-300 disabled:opacity-50 rounded-sm"
               >
                 {status === "sending"
                   ? "Envoi en cours..."

@@ -41,7 +41,7 @@ export default function Situations() {
           </p>
           <Link
             href="/soumettre-demande"
-            className="inline-flex text-xs tracking-[0.15em] uppercase px-8 py-4 border border-charcoal text-charcoal hover:bg-sand/60 hover:text-cream transition-all duration-300"
+            className="inline-flex text-xs tracking-[0.15em] uppercase px-8 py-4 border border-charcoal text-charcoal hover:bg-charcoal hover:text-cream transition-all duration-300 rounded-sm"
           >
             Soumettre une demande confidentielle
           </Link>
