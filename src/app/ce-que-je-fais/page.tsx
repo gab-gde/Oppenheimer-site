@@ -9,10 +9,10 @@ export const metadata = {
 export default function CeQueNousFaisons() {
   return (
     <>
-      <section className="bg-charcoal">
+      <section className="bg-sand/60">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-          <div className="section-label !text-gold">{ceQueNousFaisons.label}</div>
-          <h1 className="font-serif text-3xl lg:text-5xl font-normal text-white">
+          <div className="section-label !text-accent">{ceQueNousFaisons.label}</div>
+          <h1 className="font-serif text-3xl lg:text-5xl font-normal text-charcoal">
             {ceQueNousFaisons.titre}
           </h1>
         </div>
@@ -25,18 +25,18 @@ export default function CeQueNousFaisons() {
           {ceQueNousFaisons.items.map((item, i) => (
             <div
               key={i}
-              className="relative p-6 lg:p-8 border border-charcoal/10 hover:border-gold/30 transition-colors duration-300"
+              className="relative p-6 lg:p-8 border border-beige/40 hover:border-accent/30 transition-colors duration-300"
             >
-              <div className="absolute top-0 left-0 w-10 h-0.5 bg-gold" />
+              <div className="absolute top-0 left-0 w-10 h-0.5 bg-accent" />
               <div className="flex items-start gap-4">
-                <span className="font-serif text-3xl text-gold/20 leading-none">
+                <span className="font-serif text-3xl text-accent/20 leading-none">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="pt-1">
                   <h3 className="text-sm lg:text-base font-medium mb-1">
                     {item.titre}
                   </h3>
-                  <p className="text-sm text-muted leading-relaxed">
+                  <p className="text-sm text-stone leading-relaxed">
                     {item.texte}
                   </p>
                 </div>
@@ -50,21 +50,21 @@ export default function CeQueNousFaisons() {
           <div className="section-label">{ceQueNousFaisons.methode.titre}</div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
             {ceQueNousFaisons.methode.etapes.map((etape, i) => (
-              <div key={i} className="p-6 bg-section relative">
-                <div className="absolute top-0 left-0 w-8 h-0.5 bg-gold" />
-                <div className="font-serif text-3xl text-gold/20 mb-2">
+              <div key={i} className="p-6 bg-sand/50 relative">
+                <div className="absolute top-0 left-0 w-8 h-0.5 bg-accent" />
+                <div className="font-serif text-3xl text-accent/20 mb-2">
                   {etape.num}
                 </div>
                 <h3 className="font-serif text-base font-medium mb-1">
                   {etape.titre}
                 </h3>
-                <p className="text-sm text-muted leading-relaxed">
+                <p className="text-sm text-stone leading-relaxed">
                   {etape.texte}
                 </p>
               </div>
             ))}
           </div>
-          <p className="text-sm text-muted mt-6 p-4 border-l-2 border-gold bg-section italic">
+          <p className="text-sm text-stone mt-6 p-4 border-l-2 border-accent bg-sand/50 italic">
             {ceQueNousFaisons.methode.note}
           </p>
         </div>

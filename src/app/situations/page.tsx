@@ -9,10 +9,10 @@ export const metadata = {
 export default function Situations() {
   return (
     <>
-      <section className="bg-charcoal">
+      <section className="bg-sand/60">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-          <div className="section-label !text-gold">{situations.label}</div>
-          <h1 className="font-serif text-3xl lg:text-5xl font-normal text-white">
+          <div className="section-label !text-accent">{situations.label}</div>
+          <h1 className="font-serif text-3xl lg:text-5xl font-normal text-charcoal">
             {situations.titre}
           </h1>
         </div>
@@ -24,11 +24,11 @@ export default function Situations() {
           {situations.items.map((item, i) => (
             <div
               key={i}
-              className="relative p-6 lg:p-8 border border-charcoal/10 bg-cream hover:border-gold/30 transition-colors duration-300"
+              className="relative p-6 lg:p-8 border border-beige/40 bg-cream hover:border-accent/30 transition-colors duration-300"
             >
-              <div className="absolute top-0 left-0 w-10 h-0.5 bg-gold" />
+              <div className="absolute top-0 left-0 w-10 h-0.5 bg-accent" />
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-gold mt-1.5 flex-shrink-0" />
+                <div className="w-2 h-2 rounded-full bg-accent mt-1.5 flex-shrink-0" />
                 <p className="text-sm lg:text-base">{item}</p>
               </div>
             </div>
@@ -36,12 +36,12 @@ export default function Situations() {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-sm text-muted mb-6">
+          <p className="text-sm text-stone mb-6">
             Vous vous reconnaissez dans l&apos;une de ces situations ?
           </p>
           <Link
             href="/soumettre-demande"
-            className="inline-flex text-xs tracking-[0.15em] uppercase px-8 py-4 border border-charcoal text-charcoal hover:bg-charcoal hover:text-cream transition-all duration-300"
+            className="inline-flex text-xs tracking-[0.15em] uppercase px-8 py-4 border border-charcoal text-charcoal hover:bg-sand/60 hover:text-cream transition-all duration-300"
           >
             Soumettre une demande confidentielle
           </Link>

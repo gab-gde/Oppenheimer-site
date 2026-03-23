@@ -9,16 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#FAFAF7",
-        charcoal: "#1A1B1F",
-        gold: {
-          DEFAULT: "#B39355",
-          light: "#D4B978",
-          dark: "#8A7040",
+        cream: "#FDFBF7",
+        sand: "#F5F0E8",
+        warm: "#EDE8DD",
+        beige: {
+          DEFAULT: "#D4CBBA",
+          dark: "#B8AC98",
         },
-        muted: "#6B6B6B",
-        subtle: "#999999",
-        section: "#F4F3EF",
+        taupe: "#8C8272",
+        stone: "#6B6259",
+        oak: "#4A423A",
+        charcoal: "#2C2824",
+        accent: {
+          DEFAULT: "#9E8B6E",
+          light: "#C2B49A",
+          dark: "#7A6B55",
+        },
       },
       fontFamily: {
         serif: ["Cormorant Garamond", "Georgia", "serif"],

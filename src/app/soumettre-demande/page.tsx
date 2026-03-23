@@ -54,16 +54,16 @@ export default function SoumettredemandePage() {
   };
 
   const inputClass =
-    "w-full px-4 py-3 bg-cream border border-charcoal/10 text-sm text-charcoal placeholder:text-subtle focus:outline-none focus:border-gold transition-colors duration-300";
+    "w-full px-4 py-3 bg-cream border border-beige/40 text-sm text-charcoal placeholder:text-taupe focus:outline-none focus:border-accent transition-colors duration-300";
 
   return (
     <>
-      <section className="bg-charcoal">
+      <section className="bg-sand/60">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-          <div className="section-label !text-gold">
+          <div className="section-label !text-accent">
             {soumettredemande.label}
           </div>
-          <h1 className="font-serif text-3xl lg:text-5xl font-normal text-white mb-6">
+          <h1 className="font-serif text-3xl lg:text-5xl font-normal text-charcoal mb-6">
             {soumettredemande.titre}
           </h1>
         </div>
@@ -72,8 +72,8 @@ export default function SoumettredemandePage() {
 
       <section className="max-w-2xl mx-auto px-6 lg:px-12 py-16 lg:py-24">
         {/* Info */}
-        <div className="mb-12 p-6 bg-section border-l-2 border-gold">
-          <p className="text-sm text-muted leading-[1.8]">
+        <div className="mb-12 p-6 bg-sand/50 border-l-2 border-accent">
+          <p className="text-sm text-stone leading-[1.8]">
             {soumettredemande.texte}
           </p>
         </div>
@@ -81,22 +81,22 @@ export default function SoumettredemandePage() {
         {/* Form */}
         {status === "success" ? (
           <div className="text-center py-16">
-            <div className="w-16 h-16 mx-auto mb-6 border border-gold rounded-full flex items-center justify-center">
-              <svg className="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <div className="w-16 h-16 mx-auto mb-6 border border-accent rounded-full flex items-center justify-center">
+              <svg className="w-7 h-7 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </div>
             <h2 className="font-serif text-2xl font-medium mb-3">
               Demande envoyée
             </h2>
-            <p className="text-sm text-muted">
+            <p className="text-sm text-stone">
               {soumettredemande.message}
             </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="block text-xs text-muted uppercase tracking-wider mb-2">
+              <label className="block text-xs text-stone uppercase tracking-wider mb-2">
                 {soumettredemande.formulaire.nom} *
               </label>
               <input
@@ -112,7 +112,7 @@ export default function SoumettredemandePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
-                <label className="block text-xs text-muted uppercase tracking-wider mb-2">
+                <label className="block text-xs text-stone uppercase tracking-wider mb-2">
                   {soumettredemande.formulaire.email} *
                 </label>
                 <input
@@ -126,7 +126,7 @@ export default function SoumettredemandePage() {
                 />
               </div>
               <div>
-                <label className="block text-xs text-muted uppercase tracking-wider mb-2">
+                <label className="block text-xs text-stone uppercase tracking-wider mb-2">
                   {soumettredemande.formulaire.telephone}
                 </label>
                 <input
@@ -141,7 +141,7 @@ export default function SoumettredemandePage() {
             </div>
 
             <div>
-              <label className="block text-xs text-muted uppercase tracking-wider mb-2">
+              <label className="block text-xs text-stone uppercase tracking-wider mb-2">
                 {soumettredemande.formulaire.description} *
               </label>
               <textarea
@@ -156,7 +156,7 @@ export default function SoumettredemandePage() {
             </div>
 
             <div>
-              <label className="block text-xs text-muted uppercase tracking-wider mb-2">
+              <label className="block text-xs text-stone uppercase tracking-wider mb-2">
                 {soumettredemande.formulaire.urgence}
               </label>
               <select
@@ -174,17 +174,17 @@ export default function SoumettredemandePage() {
             </div>
 
             <div>
-              <label className="block text-xs text-muted uppercase tracking-wider mb-2">
+              <label className="block text-xs text-stone uppercase tracking-wider mb-2">
                 {soumettredemande.formulaire.upload}
               </label>
               <div
                 onClick={() => fileRef.current?.click()}
-                className="border border-dashed border-charcoal/15 p-6 text-center cursor-pointer hover:border-gold/40 transition-colors duration-300"
+                className="border border-dashed border-charcoal/15 p-6 text-center cursor-pointer hover:border-accent/40 transition-colors duration-300"
               >
-                <svg className="w-6 h-6 mx-auto mb-2 text-subtle" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <svg className="w-6 h-6 mx-auto mb-2 text-taupe" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" />
                 </svg>
-                <p className="text-xs text-muted">
+                <p className="text-xs text-stone">
                   {files.length > 0
                     ? `${files.length} fichier(s) sélectionné(s)`
                     : "Cliquez pour ajouter des documents"}
@@ -204,7 +204,7 @@ export default function SoumettredemandePage() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="w-full text-xs tracking-[0.15em] uppercase py-4 bg-charcoal text-cream hover:bg-gold transition-colors duration-300 disabled:opacity-50"
+                className="w-full text-xs tracking-[0.15em] uppercase py-4 bg-sand/60 text-cream hover:bg-accent transition-colors duration-300 disabled:opacity-50"
               >
                 {status === "sending"
                   ? "Envoi en cours..."
@@ -218,7 +218,7 @@ export default function SoumettredemandePage() {
               </p>
             )}
 
-            <p className="text-[11px] text-subtle text-center leading-relaxed">
+            <p className="text-[11px] text-taupe text-center leading-relaxed">
               Vos informations sont traitées avec la plus stricte confidentialité et ne sont jamais transmises à des tiers.
             </p>
           </form>
