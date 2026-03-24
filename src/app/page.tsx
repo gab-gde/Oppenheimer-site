@@ -9,8 +9,13 @@ export default function Home() {
   return (
     <div ref={ref}>
       {/* ══════ HERO ══════ */}
-      <section className="relative min-h-[88vh] flex items-center bg-sand overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-sand via-warm/80 to-cream z-10" />
+      <section className="relative min-h-[88vh] flex items-center overflow-hidden">
+        {/* Background image - bâtiment institutionnel */}
+        <div className="absolute inset-0 z-0">
+          <Image src="/hero-building.jpg" alt="" fill className="object-cover" priority />
+        </div>
+        {/* Overlay clair pour lisibilité */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/85 to-cream/60 z-10" />
         <div className="absolute right-[-5%] bottom-[-10%] font-serif text-[14rem] lg:text-[22rem] font-light text-accent/[0.04] leading-none select-none z-0">Conseil</div>
 
         <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-16 py-30 w-full">
