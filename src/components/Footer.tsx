@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { siteConfig, team } from "@/lib/content";
+import { siteConfig } from "@/lib/content";
 
 export default function Footer() {
   return (

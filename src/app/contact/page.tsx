@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { contactPage, siteConfig, team } from "@/lib/content";
 
 export const metadata = { title: "Contact — Oppenheimer Conseil" };
@@ -26,8 +27,8 @@ export default function ContactPageView() {
 
           {/* Rodolphe */}
           <div className="p-8 bg-sand/50 border border-beige/30 rounded-sm flex items-center gap-5">
-            <div className="w-14 h-14 rounded-full overflow-hidden border border-beige flex-shrink-0">
-              <img src={team.rodolphe.photo} alt="" className="w-full h-full object-cover" />
+            <div className="w-14 h-14 rounded-full overflow-hidden border border-beige flex-shrink-0 relative">
+              <Image src={team.rodolphe.photo} alt={team.rodolphe.nom} fill className="object-cover" />
             </div>
             <div>
               <p className="text-sm font-medium">{team.rodolphe.nom}</p>
@@ -37,8 +38,8 @@ export default function ContactPageView() {
 
           {/* Magali */}
           <div className="p-8 bg-sand/50 border border-beige/30 rounded-sm flex items-center gap-5">
-            <div className="w-14 h-14 rounded-full overflow-hidden border border-beige flex-shrink-0">
-              <img src={team.magali.photo} alt="" className="w-full h-full object-cover" />
+            <div className="w-14 h-14 rounded-full overflow-hidden border border-beige flex-shrink-0 relative">
+              <Image src={team.magali.photo} alt={team.magali.nom} fill className="object-cover" />
             </div>
             <div>
               <p className="text-sm font-medium">{team.magali.nom}</p>
