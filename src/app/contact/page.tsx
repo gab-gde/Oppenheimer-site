@@ -1,75 +1,58 @@
 import Link from "next/link";
-import { contactPage } from "@/lib/content";
+import { contactPage, siteConfig, team } from "@/lib/content";
 
-export const metadata = {
-  title: "Contact — Rodolphe Oppenheimer-Faure",
-  description:
-    "Prenez contact pour soumettre une situation ou obtenir des informations.",
-};
+export const metadata = { title: "Contact — Oppenheimer Conseil" };
 
 export default function ContactPageView() {
   return (
     <>
       <section className="bg-sand/60">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-          <div className="section-label !text-accent">{contactPage.label}</div>
-          <h1 className="font-serif text-3xl lg:text-5xl font-normal text-charcoal">
-            {contactPage.titre}
-          </h1>
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 py-22 lg:py-30">
+          <div className="section-label">{contactPage.label}</div>
+          <h1 className="font-serif text-4xl lg:text-6xl font-light text-charcoal">{contactPage.titre}</h1>
         </div>
       </section>
       <div className="gold-line" />
 
-      <section className="max-w-3xl mx-auto px-6 lg:px-12 py-16 lg:py-24">
-        <p className="text-sm lg:text-base text-stone leading-[1.9] mb-12">
-          {contactPage.texte}
-        </p>
+      <section className="max-w-3xl mx-auto px-6 lg:px-16 py-22 lg:py-30">
+        <p className="text-base text-oak leading-[1.9] mb-14">{contactPage.texte}</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          {/* Email */}
-          <div className="p-8 border border-beige/40 relative">
-            <div className="absolute top-0 left-0 w-10 h-0.5 bg-accent" />
-            <div className="w-10 h-10 border border-accent/30 rounded-full flex items-center justify-center mb-4">
-              <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <path d="M22 6l-10 7L2 6" />
-              </svg>
-            </div>
-            <p className="text-xs text-stone uppercase tracking-wider mb-2">
-              Email
-            </p>
-            <p className="text-sm font-medium text-taupe italic">
-              (à préciser)
-            </p>
+        <div className="space-y-5 mb-14">
+          {/* Contact général */}
+          <div className="p-8 bg-sand/50 border border-beige/30 rounded-sm">
+            <p className="text-xs text-taupe uppercase tracking-wider mb-2">Contact général</p>
+            <a href={`mailto:${siteConfig.contact}`} className="text-base font-medium text-charcoal hover:text-accent transition-colors">{siteConfig.contact}</a>
           </div>
 
-          {/* Formulaire */}
-          <div className="p-8 border border-beige/40 relative">
-            <div className="absolute top-0 left-0 w-10 h-0.5 bg-accent" />
-            <div className="w-10 h-10 border border-accent/30 rounded-full flex items-center justify-center mb-4">
-              <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
-              </svg>
+          {/* Rodolphe */}
+          <div className="p-8 bg-sand/50 border border-beige/30 rounded-sm flex items-center gap-5">
+            <div className="w-14 h-14 rounded-full overflow-hidden border border-beige flex-shrink-0">
+              <img src={team.rodolphe.photo} alt="" className="w-full h-full object-cover" />
             </div>
-            <p className="text-xs text-stone uppercase tracking-wider mb-2">
-              Demande confidentielle
-            </p>
-            <Link
-              href="/soumettre-demande"
-              className="text-sm font-medium hover:text-accent transition-colors"
-            >
-              Soumettre via le formulaire →
-            </Link>
+            <div>
+              <p className="text-sm font-medium">{team.rodolphe.nom}</p>
+              <a href={`mailto:${team.rodolphe.email}`} className="text-sm text-accent hover:text-accent-dark transition-colors">{team.rodolphe.email}</a>
+            </div>
+          </div>
+
+          {/* Magali */}
+          <div className="p-8 bg-sand/50 border border-beige/30 rounded-sm flex items-center gap-5">
+            <div className="w-14 h-14 rounded-full overflow-hidden border border-beige flex-shrink-0">
+              <img src={team.magali.photo} alt="" className="w-full h-full object-cover" />
+            </div>
+            <div>
+              <p className="text-sm font-medium">{team.magali.nom}</p>
+              <a href={`mailto:${team.magali.email}`} className="text-sm text-accent hover:text-accent-dark transition-colors">{team.magali.email}</a>
+            </div>
           </div>
         </div>
 
-        <div className="p-6 bg-sand/50 border-l-2 border-accent">
-          <p className="text-sm text-stone leading-[1.9]">
-            Toute prise de contact est traitée avec la plus stricte
-            confidentialité. Les informations transmises ne sont jamais
-            partagées avec des tiers.
-          </p>
+        <Link href="/soumettre-demande" className="inline-flex text-[13px] tracking-[0.1em] uppercase px-8 py-4 bg-charcoal text-cream hover:bg-oak transition-colors duration-300 rounded-sm mb-14">
+          Soumettre une demande confidentielle
+        </Link>
+
+        <div className="p-7 bg-sand/40 border-l-[3px] border-accent rounded-sm">
+          <p className="text-sm text-taupe leading-[1.8]">Toute prise de contact est traitée avec la plus stricte confidentialité. Les informations transmises ne sont jamais partagées avec des tiers.</p>
         </div>
       </section>
     </>

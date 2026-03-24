@@ -5,14 +5,10 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Oppenheimer Conseil — Accompagnement de situations complexes",
-  description:
-    "Conseil, structuration et intervention sur des dossiers bloqués ou difficiles à faire évoluer.",
-  keywords:
-    "accompagnement, situations complexes, institutions, conseil stratégique, dossiers bloqués, Oppenheimer Conseil",
+  description: "Conseil, structuration et intervention sur des dossiers bloqués ou difficiles à faire évoluer.",
   openGraph: {
     title: "Oppenheimer Conseil — Accompagnement de situations complexes",
-    description:
-      "Conseil, structuration et intervention sur des dossiers bloqués ou difficiles à faire évoluer.",
+    description: "Conseil, structuration et intervention sur des dossiers bloqués ou difficiles à faire évoluer.",
     type: "website",
   },
 };

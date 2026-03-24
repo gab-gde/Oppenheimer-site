@@ -1,47 +1,31 @@
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { accueil } from "@/lib/content";
-import { useScrollReveal } from "@/lib/useScrollReveal";
+import { accueil, team } from "@/lib/content";
+import { useReveal } from "@/lib/useReveal";
 
 export default function Home() {
-  const ref = useScrollReveal();
-
+  const ref = useReveal();
   return (
     <div ref={ref}>
       {/* ══════ HERO ══════ */}
-      <section className="relative min-h-[80vh] lg:min-h-[85vh] bg-sand flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-sand via-sand/95 to-cream z-10" />
-        <div className="absolute right-0 bottom-0 font-serif text-[10rem] lg:text-[16rem] text-accent/[0.04] leading-none tracking-tighter select-none z-0">
-          Conseil
-        </div>
+      <section className="relative min-h-[88vh] flex items-center bg-sand overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-sand via-warm/80 to-cream z-10" />
+        <div className="absolute right-[-5%] bottom-[-10%] font-serif text-[14rem] lg:text-[22rem] font-light text-accent/[0.04] leading-none select-none z-0">Conseil</div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-12 py-24 w-full">
-          <div className="max-w-2xl">
-            <div className="section-label !mb-6 fade-up">{accueil.hero.label}</div>
-
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-[3.2rem] font-normal text-charcoal leading-[1.15] mb-4 fade-up">
-              {accueil.hero.titre}{" "}
-              <em className="italic text-accent">{accueil.hero.titreAccent}</em>
+        <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-16 py-30 w-full">
+          <div className="max-w-3xl">
+            <div className="section-label !mb-8 reveal">{accueil.hero.label}</div>
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl font-light text-charcoal leading-[1.08] mb-8 reveal">
+              {accueil.hero.titre}<br />
+              <em className="italic text-accent font-normal">{accueil.hero.titreAccent}</em>
             </h1>
-
-            <p className="text-sm lg:text-base text-stone leading-relaxed max-w-lg mb-3 fade-up">
-              {accueil.hero.sousTitre}
-            </p>
-            <p className="text-sm text-taupe leading-relaxed max-w-lg mb-10 fade-up">
-              {accueil.hero.description}
-            </p>
-
-            <div className="fade-up">
-              <Link
-                href="/soumettre-demande"
-                className="group inline-flex items-center gap-3 text-xs tracking-[0.12em] uppercase text-cream bg-charcoal px-8 py-4 hover:bg-oak transition-colors duration-300 rounded-sm"
-              >
+            <p className="text-base lg:text-lg text-oak leading-relaxed max-w-xl mb-4 reveal">{accueil.hero.sousTitre}</p>
+            <p className="text-sm text-taupe leading-relaxed max-w-xl mb-12 reveal">{accueil.hero.description}</p>
+            <div className="reveal">
+              <Link href="/soumettre-demande" className="group inline-flex items-center gap-3 text-[13px] tracking-[0.1em] uppercase text-cream bg-charcoal px-10 py-5 hover:bg-oak transition-colors duration-300 rounded-sm">
                 {accueil.hero.cta}
-                <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M1 13L13 1M13 1H5M13 1v8" />
-                </svg>
+                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M1 13L13 1M13 1H5M13 1v8" /></svg>
               </Link>
             </div>
           </div>
@@ -50,67 +34,65 @@ export default function Home() {
 
       <div className="gold-line" />
 
-      {/* ══════ ÊTES-VOUS CONCERNÉ ? ══════ */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-        <div className="section-label fade-up">{accueil.concerne.label}</div>
-        <h2 className="font-serif text-2xl lg:text-3xl font-normal leading-snug mb-10 fade-up">
-          {accueil.concerne.titre}
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 stagger-children">
+      {/* ══════ ÊTES-VOUS CONCERNÉ ══════ */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-16 py-26 lg:py-36">
+        <div className="section-label reveal">{accueil.concerne.label}</div>
+        <h2 className="font-serif text-3xl lg:text-5xl font-light leading-tight mb-14 reveal">{accueil.concerne.titre}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 stagger">
           {accueil.concerne.items.map((item, i) => (
-            <div key={i} className="relative p-6 bg-sand/60 border border-beige/40 hover:border-accent/30 transition-colors duration-300 rounded-sm">
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-accent mt-1.5 flex-shrink-0" />
-                <p className="text-sm text-stone">{item}</p>
+            <div key={i} className="p-7 bg-sand/50 border border-beige/30 hover:border-accent/30 transition-all duration-300 rounded-sm">
+              <div className="flex items-start gap-4">
+                <div className="w-2.5 h-2.5 rounded-full bg-accent/60 mt-1.5 flex-shrink-0" />
+                <p className="text-[15px] text-oak leading-relaxed">{item}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ══════ POSITIONNEMENT ══════ */}
-      <section className="bg-sand/50 fade-in">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20">
-          <div className="section-label">{accueil.positionnement.label}</div>
-          <h2 className="font-serif text-2xl lg:text-4xl font-normal leading-snug mb-4 max-w-2xl">
-            {accueil.positionnement.titre}
-          </h2>
-          <p className="text-sm text-stone leading-relaxed max-w-xl font-medium">
-            {accueil.positionnement.texte}
-          </p>
+      {/* ══════ POSITIONNEMENT — full width band ══════ */}
+      <section className="bg-warm/60 reveal-fade">
+        <div className="max-w-5xl mx-auto px-6 lg:px-16 py-22 lg:py-30 text-center">
+          <div className="section-label justify-center">{accueil.positionnement.label}</div>
+          <h2 className="font-serif text-3xl lg:text-5xl font-light leading-tight mb-6 max-w-3xl mx-auto">{accueil.positionnement.titre}</h2>
+          <p className="text-base text-stone leading-relaxed max-w-xl mx-auto">{accueil.positionnement.texte}</p>
         </div>
       </section>
 
-      {/* ══════ LES ASSOCIÉS ══════ */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-        <div className="section-label fade-up">Les associés</div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-8 stagger-children">
-          <div className="text-center">
-            <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-2 border-beige">
-              <Image src="/rodolphe.png" alt="Rodolphe Oppenheimer" fill className="object-cover" />
+      {/* ══════ LES ASSOCIÉS — bigger photos ══════ */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-16 py-26 lg:py-36">
+        <div className="section-label reveal">Les associés</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 mt-12 stagger">
+          {[team.rodolphe, team.magali].map((person) => (
+            <div key={person.nom} className="text-center">
+              <div className="relative w-56 h-56 lg:w-72 lg:h-72 mx-auto mb-8 rounded-full overflow-hidden border-3 border-beige shadow-sm">
+                <Image src={person.photo} alt={person.nom} fill className="object-cover" />
+              </div>
+              <h3 className="font-serif text-2xl lg:text-3xl font-normal mb-1">{person.nom}</h3>
+              <p className="text-sm text-taupe tracking-wider mb-3">{person.role}</p>
+              <a href={`mailto:${person.email}`} className="text-sm text-accent hover:text-accent-dark transition-colors">{person.email}</a>
+              {person.linkedin && (
+                <div className="mt-3">
+                  <a href={person.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs text-taupe hover:text-accent transition-colors">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                  </a>
+                </div>
+              )}
             </div>
-            <h3 className="font-serif text-xl font-medium mb-1">Rodolphe Oppenheimer</h3>
-            <p className="text-xs text-taupe tracking-wider">Fondateur</p>
-          </div>
-          <div className="text-center">
-            <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-2 border-beige">
-              <Image src="/magali.jpg" alt="Magali Duval" fill className="object-cover" />
-            </div>
-            <h3 className="font-serif text-xl font-medium mb-1">Magali Duval</h3>
-            <p className="text-xs text-taupe tracking-wider">Associée</p>
-          </div>
+          ))}
         </div>
       </section>
 
       {/* ══════ CE QUE NOUS APPORTONS ══════ */}
-      <section className="bg-sand/50 fade-in">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
+      <section className="bg-sand/40 reveal-fade">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 py-26 lg:py-36">
           <div className="section-label">{accueil.apports.label}</div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 stagger-children">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 stagger">
             {accueil.apports.items.map((item, i) => (
-              <div key={i} className="flex items-start gap-3 p-5 bg-cream border border-beige/40 rounded-sm">
-                <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
-                <p className="text-sm font-medium text-stone">{item}</p>
+              <div key={i} className="flex items-start gap-4 p-7 bg-cream border border-beige/30 rounded-sm">
+                <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
+                <p className="text-[15px] font-medium text-oak">{item}</p>
               </div>
             ))}
           </div>
@@ -118,17 +100,13 @@ export default function Home() {
       </section>
 
       {/* ══════ COMMENT NOUS INTERVENONS ══════ */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-        <div className="section-label fade-up">{accueil.commentNousIntervenons.label}</div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 stagger-children">
+      <section className="max-w-7xl mx-auto px-6 lg:px-16 py-26 lg:py-36">
+        <div className="section-label reveal">{accueil.commentNousIntervenons.label}</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 stagger">
           {accueil.commentNousIntervenons.etapes.map((etape, i) => (
-            <div key={i} className="relative p-6 bg-sand/50 border border-beige/40 rounded-sm">
-              <div className="font-serif text-4xl text-accent/20 mb-3">
-                {String(i + 1).padStart(2, "0")}
-              </div>
-              <h3 className="font-serif text-base font-medium text-charcoal mb-2">
-                {etape.titre}
-              </h3>
+            <div key={i} className="p-7 bg-sand/40 border border-beige/30 rounded-sm">
+              <div className="font-serif text-5xl text-accent/15 mb-4">{String(i + 1).padStart(2, "0")}</div>
+              <h3 className="font-serif text-lg font-medium text-charcoal mb-2">{etape.titre}</h3>
               <p className="text-sm text-taupe leading-relaxed">{etape.texte}</p>
             </div>
           ))}
@@ -136,69 +114,57 @@ export default function Home() {
       </section>
 
       {/* ══════ POUR QUI ══════ */}
-      <section className="bg-sand/50 fade-in">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20">
-          <div className="section-label">{accueil.pourQui.label}</div>
-          <div className="flex flex-col md:flex-row gap-4 mt-6 stagger-children">
+      <section className="bg-warm/40 reveal-fade">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 py-22 lg:py-30">
+          <div className="section-label justify-center">{accueil.pourQui.label}</div>
+          <div className="flex flex-col md:flex-row gap-6 mt-10 stagger">
             {accueil.pourQui.items.map((item, i) => (
-              <div key={i} className="flex-1 p-6 bg-cream border border-beige/40 text-center rounded-sm">
-                <div className="w-10 h-10 mx-auto mb-4 border border-accent/30 rounded-full flex items-center justify-center">
-                  <span className="font-serif text-sm text-accent">{String(i + 1).padStart(2, "0")}</span>
+              <div key={i} className="flex-1 p-8 bg-cream border border-beige/30 text-center rounded-sm">
+                <div className="w-12 h-12 mx-auto mb-5 border border-accent/30 rounded-full flex items-center justify-center">
+                  <span className="font-serif text-lg text-accent">{String(i + 1).padStart(2, "0")}</span>
                 </div>
-                <p className="text-sm text-stone">{item}</p>
+                <p className="text-[15px] text-oak">{item}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ══════ MÉTHODE — PILIERS ══════ */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-        <div className="section-label fade-up">{accueil.methode.label}</div>
-        <h2 className="font-serif text-2xl lg:text-3xl font-normal leading-snug mb-10 fade-up">
-          {accueil.methode.titre}
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-beige/50 border border-beige/50 rounded-sm stagger-children">
-          {accueil.methode.piliers.map((pilier, i) => (
-            <div key={i} className="p-8 lg:p-10 text-center">
-              <div className="w-12 h-12 mx-auto mb-5 border border-accent/40 rounded-full flex items-center justify-center">
-                {i === 0 && <svg className="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>}
-                {i === 1 && <svg className="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>}
-                {i === 2 && <svg className="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" /></svg>}
+      {/* ══════ PILIERS ══════ */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-16 py-26 lg:py-36">
+        <div className="section-label reveal">{accueil.methode.label}</div>
+        <h2 className="font-serif text-3xl lg:text-4xl font-light leading-tight mb-14 reveal">{accueil.methode.titre}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-beige/40 border border-beige/40 rounded-sm stagger">
+          {accueil.methode.piliers.map((p, i) => (
+            <div key={i} className="p-10 lg:p-14 text-center">
+              <div className="w-14 h-14 mx-auto mb-6 border border-accent/40 rounded-full flex items-center justify-center">
+                {i === 0 && <svg className="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>}
+                {i === 1 && <svg className="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>}
+                {i === 2 && <svg className="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>}
               </div>
-              <h3 className="font-serif text-lg font-medium mb-2">{pilier.titre}</h3>
-              <p className="text-xs text-taupe leading-relaxed">{pilier.texte}</p>
+              <h3 className="font-serif text-xl font-medium mb-3">{p.titre}</h3>
+              <p className="text-sm text-taupe leading-relaxed">{p.texte}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ══════ DIMENSION + SÉLECTIVITÉ + CADRE ══════ */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 pb-20 lg:pb-28 stagger-children">
+      {/* ══════ 3 blocs dimension/sélectivité/cadre ══════ */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-16 pb-26 lg:pb-36 stagger">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 border-l-2 border-accent bg-sand/50 rounded-sm">
-            <p className="text-sm text-stone leading-[1.8] italic">{accueil.dimensionImplicite.texte}</p>
-          </div>
-          <div className="p-6 border-l-2 border-beige bg-sand/50 rounded-sm">
-            <p className="text-sm text-taupe leading-[1.8]">{accueil.selectivite.texte}</p>
-          </div>
-          <div className="p-6 border-l-2 border-beige bg-sand/50 rounded-sm">
-            <p className="text-sm text-taupe leading-[1.8]">{accueil.cadre.texte}</p>
-          </div>
+          <div className="p-7 border-l-[3px] border-accent bg-sand/40 rounded-sm"><p className="text-sm text-oak leading-[1.8] italic">{accueil.dimensionImplicite.texte}</p></div>
+          <div className="p-7 border-l-[3px] border-beige bg-sand/40 rounded-sm"><p className="text-sm text-taupe leading-[1.8]">{accueil.selectivite.texte}</p></div>
+          <div className="p-7 border-l-[3px] border-beige bg-sand/40 rounded-sm"><p className="text-sm text-taupe leading-[1.8]">{accueil.cadre.texte}</p></div>
         </div>
       </section>
 
-      {/* ══════ CTA FINAL ══════ */}
-      <section className="bg-charcoal rounded-sm mx-6 lg:mx-12 mb-20 fade-up">
-        <div className="max-w-5xl mx-auto px-8 lg:px-16 py-16 lg:py-20 flex flex-col lg:flex-row items-center justify-between gap-8">
-          <h2 className="font-serif text-2xl lg:text-3xl font-normal text-cream leading-snug max-w-lg">
-            {accueil.ctaFinal.titre}{" "}
-            <em className="italic text-accent-light">{accueil.ctaFinal.titreAccent}</em>
+      {/* ══════ CTA ══════ */}
+      <section className="bg-charcoal mx-6 lg:mx-16 mb-26 rounded-sm reveal">
+        <div className="max-w-5xl mx-auto px-10 lg:px-20 py-20 lg:py-26 flex flex-col lg:flex-row items-center justify-between gap-10">
+          <h2 className="font-serif text-3xl lg:text-4xl font-light text-cream leading-snug max-w-lg">
+            {accueil.ctaFinal.titre} <em className="italic text-accent-light">{accueil.ctaFinal.titreAccent}</em>
           </h2>
-          <Link
-            href="/soumettre-demande"
-            className="whitespace-nowrap text-xs tracking-[0.12em] uppercase px-10 py-4 border border-accent-light text-accent-light hover:bg-accent-light hover:text-charcoal transition-all duration-300 rounded-sm"
-          >
+          <Link href="/soumettre-demande" className="whitespace-nowrap text-[13px] tracking-[0.1em] uppercase px-10 py-5 border border-accent-light text-accent-light hover:bg-accent-light hover:text-charcoal transition-all duration-300 rounded-sm">
             {accueil.ctaFinal.cta}
           </Link>
         </div>

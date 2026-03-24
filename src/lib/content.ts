@@ -1,28 +1,39 @@
 // ============================================================
-// CONTENU DU SITE — Modifiez vos textes ici directement
-// Fichier : src/lib/content.ts
+// CONTENU DU SITE — Modifiez vos textes ici
 // ============================================================
 
 export const siteConfig = {
-  name: "Rodolphe Oppenheimer-Faure",
-  title: "Accompagnement de situations complexes et sensibles",
-  description:
-    "Conseil, structuration et intervention sur des dossiers bloqués ou difficiles à faire évoluer.",
+  name: "Oppenheimer Conseil",
+  contact: "contact@oppenheimer-conseil.com",
+  domain: "www.oppenheimer-conseil.com",
 };
 
-// ─── PAGE ACCUEIL ────────────────────────────────────────────
+export const team = {
+  rodolphe: {
+    nom: "Rodolphe Oppenheimer",
+    role: "Fondateur",
+    email: "rodolphe@oppenheimer-conseil.com",
+    linkedin: "https://www.linkedin.com/in/rodolphe-oppenheimer-faure-3067463b9/",
+    photo: "/rodolphe.png",
+  },
+  magali: {
+    nom: "Magali Duval",
+    role: "Associée",
+    email: "magali@oppenheimer-conseil.com",
+    linkedin: "",
+    photo: "/magali.jpg",
+  },
+};
+
 export const accueil = {
   hero: {
     label: "Accompagnement stratégique",
     titre: "Accompagnement de situations",
     titreAccent: "complexes et sensibles",
-    sousTitre:
-      "Conseil, structuration et intervention sur des dossiers bloqués ou difficiles à faire évoluer.",
-    description:
-      "Lorsqu'une situation s'enlise, devient illisible ou reste sans réponse, une approche classique ne suffit plus. Nous intervenons pour analyser, structurer et définir une stratégie adaptée à chaque contexte.",
+    sousTitre: "Conseil, structuration et intervention sur des dossiers bloqués ou difficiles à faire évoluer.",
+    description: "Lorsqu'une situation s'enlise, devient illisible ou reste sans réponse, une approche classique ne suffit plus. Nous intervenons pour analyser, structurer et définir une stratégie adaptée à chaque contexte.",
     cta: "Soumettre une demande",
   },
-
   concerne: {
     label: "Êtes-vous concerné ?",
     titre: "Nous intervenons notamment lorsque :",
@@ -34,14 +45,11 @@ export const accueil = {
       "Aucune stratégie claire n'a encore été définie",
     ],
   },
-
   positionnement: {
     label: "Positionnement",
     titre: "Chaque situation est unique et appelle une réponse adaptée.",
-    texte:
-      "Notre intervention s'inscrit dans une logique de compréhension fine et d'efficacité concrète.",
+    texte: "Notre intervention s'inscrit dans une logique de compréhension fine et d'efficacité concrète.",
   },
-
   apports: {
     label: "Ce que nous apportons",
     items: [
@@ -52,29 +60,15 @@ export const accueil = {
       "Un accompagnement ciblé dans les démarches",
     ],
   },
-
   commentNousIntervenons: {
     label: "Comment nous intervenons",
     etapes: [
-      {
-        titre: "Analyse confidentielle de la situation",
-        texte: "Prise de contact et évaluation initiale de votre demande.",
-      },
-      {
-        titre: "Diagnostic des enjeux et des blocages",
-        texte: "Lecture approfondie de la situation et identification des freins.",
-      },
-      {
-        titre: "Proposition d'une stratégie adaptée",
-        texte: "Définition d'une ligne d'action claire et réaliste.",
-      },
-      {
-        titre: "Accompagnement si pertinent",
-        texte: "Appui dans les démarches et leur organisation.",
-      },
+      { titre: "Analyse confidentielle", texte: "Prise de contact et évaluation initiale de votre demande." },
+      { titre: "Diagnostic des enjeux", texte: "Lecture approfondie de la situation et identification des freins." },
+      { titre: "Stratégie adaptée", texte: "Définition d'une ligne d'action claire et réaliste." },
+      { titre: "Accompagnement", texte: "Appui dans les démarches et leur organisation." },
     ],
   },
-
   pourQui: {
     label: "Pour qui",
     items: [
@@ -83,43 +77,18 @@ export const accueil = {
       "Situations impliquant des institutions ou des environnements multiples",
     ],
   },
-
   methode: {
     label: "Méthode",
     titre: "Une approche fondée sur la rigueur",
     piliers: [
-      {
-        titre: "Discrétion",
-        texte:
-          "Chaque dossier est traité avec la plus stricte confidentialité.",
-      },
-      {
-        titre: "Rigueur",
-        texte: "Analyse approfondie, diagnostic précis, stratégie adaptée.",
-      },
-      {
-        titre: "Approche personnalisée",
-        texte:
-          "Chaque situation fait l'objet d'une intervention sur mesure.",
-      },
+      { titre: "Discrétion", texte: "Chaque dossier est traité avec la plus stricte confidentialité." },
+      { titre: "Rigueur", texte: "Analyse approfondie, diagnostic précis, stratégie adaptée." },
+      { titre: "Approche personnalisée", texte: "Chaque situation fait l'objet d'une intervention sur mesure." },
     ],
   },
-
-  selectivite: {
-    texte:
-      "Les interventions sont limitées à un nombre restreint de situations, afin de garantir un suivi rigoureux.",
-  },
-
-  cadre: {
-    texte:
-      "Notre intervention consiste en un travail de conseil, d'analyse et d'accompagnement. Elle ne se substitue pas aux décisions des institutions concernées et ne constitue pas une activité juridique.",
-  },
-
-  dimensionImplicite: {
-    texte:
-      "Une bonne compréhension des environnements décisionnels permet souvent de rétablir des situations qui semblaient figées.",
-  },
-
+  selectivite: { texte: "Les interventions sont limitées à un nombre restreint de situations, afin de garantir un suivi rigoureux." },
+  cadre: { texte: "Notre intervention consiste en un travail de conseil, d'analyse et d'accompagnement. Elle ne se substitue pas aux décisions des institutions concernées et ne constitue pas une activité juridique." },
+  dimensionImplicite: { texte: "Une bonne compréhension des environnements décisionnels permet souvent de rétablir des situations qui semblaient figées." },
   ctaFinal: {
     titre: "Certaines situations nécessitent d'être abordées",
     titreAccent: "autrement",
@@ -127,7 +96,6 @@ export const accueil = {
   },
 };
 
-// ─── PAGE QUI SOMMES-NOUS ────────────────────────────────────
 export const quiSommesNous = {
   label: "Qui sommes-nous",
   titre: "Notre parcours",
@@ -138,8 +106,7 @@ export const quiSommesNous = {
   ],
   experience: {
     titre: "Une compréhension concrète des mécanismes décisionnels",
-    texte:
-      "Cette expérience nous a permis de comprendre de manière concrète les mécanismes décisionnels, les équilibres institutionnels et les logiques d'acteurs qui structurent les situations complexes. Elle nourrit aujourd'hui notre capacité à analyser les situations avec précision, à en identifier les blocages réels et à proposer des stratégies adaptées, qu'il s'agisse de situations individuelles ou de contextes plus institutionnels.",
+    texte: "Cette expérience nous a permis de comprendre de manière concrète les mécanismes décisionnels, les équilibres institutionnels et les logiques d'acteurs qui structurent les situations complexes. Elle nourrit aujourd'hui notre capacité à analyser les situations avec précision, à en identifier les blocages réels et à proposer des stratégies adaptées, qu'il s'agisse de situations individuelles ou de contextes plus institutionnels.",
   },
   mandats: {
     titre: "Engagement public",
@@ -166,93 +133,46 @@ export const quiSommesNous = {
   },
 };
 
-// ─── PAGE APPROCHE & RÉSEAU ──────────────────────────────────
 export const approcheReseau = {
   label: "Approche & réseau",
   titre: "Certaines situations ne se règlent pas seules.",
-  intro:
-    "Elles demandent d'être comprises, structurées… et parfois abordées autrement. Notre travail consiste à analyser chaque situation dans sa globalité et à construire, lorsque c'est nécessaire, une réponse adaptée en nous appuyant sur les bonnes compétences.",
+  intro: "Elles demandent d'être comprises, structurées… et parfois abordées autrement. Notre travail consiste à analyser chaque situation dans sa globalité et à construire, lorsque c'est nécessaire, une réponse adaptée en nous appuyant sur les bonnes compétences.",
   reseau: {
     titre: "Un réseau de compétences complémentaires",
-    texte:
-      "Au fil du temps, nous avons développé des relations de travail avec des professionnels issus de différents univers :",
-    domaines: [
-      "Conseil",
-      "Accompagnement stratégique",
-      "Gestion et organisation",
-      "Environnements institutionnels",
-    ],
-    conclusion:
-      "Selon les situations, ces regards complémentaires permettent de clarifier, faire évoluer ou débloquer des dossiers qui semblaient figés.",
+    texte: "Au fil du temps, nous avons développé des relations de travail avec des professionnels issus de différents univers :",
+    domaines: ["Conseil", "Accompagnement stratégique", "Gestion et organisation", "Environnements institutionnels"],
+    conclusion: "Selon les situations, ces regards complémentaires permettent de clarifier, faire évoluer ou débloquer des dossiers qui semblaient figés.",
   },
   collaborateurs: {
     titre: "Extension collaborateurs",
-    texte:
-      "Certaines situations plus simples ou plus opérationnelles peuvent également être prises en charge dans ce cadre. Nous nous appuyons alors sur des collaborateurs de confiance, avec lesquels nous travaillons régulièrement, afin d'assurer un suivi sérieux, structuré et adapté à chaque dossier.",
+    texte: "Certaines situations plus simples ou plus opérationnelles peuvent également être prises en charge dans ce cadre. Nous nous appuyons alors sur des collaborateurs de confiance, avec lesquels nous travaillons régulièrement, afin d'assurer un suivi sérieux, structuré et adapté à chaque dossier.",
   },
-  signature:
-    "L'essentiel n'est pas seulement de comprendre une situation, mais de savoir comment la faire évoluer.",
+  signature: "L'essentiel n'est pas seulement de comprendre une situation, mais de savoir comment la faire évoluer.",
 };
 
-// ─── PAGE CE QUE NOUS FAISONS ────────────────────────────────
 export const ceQueNousFaisons = {
   label: "Ce que nous faisons",
   titre: "Nos domaines d'intervention",
   items: [
-    {
-      titre: "Analyse de situation",
-      texte: "Évaluation globale du dossier, des enjeux et des marges d'action.",
-    },
-    {
-      titre: "Identification des blocages",
-      texte: "Repérage des freins, incohérences ou obstacles.",
-    },
-    {
-      titre: "Structuration du dossier",
-      texte: "Organisation claire des éléments et des priorités.",
-    },
-    {
-      titre: "Conseil stratégique",
-      texte: "Définition d'une ligne d'action adaptée.",
-    },
-    {
-      titre: "Accompagnement",
-      texte: "Appui dans les démarches et leur organisation.",
-    },
-    {
-      titre: "Coordination",
-      texte: "Mobilisation de compétences complémentaires si nécessaire.",
-    },
+    { titre: "Analyse de situation", texte: "Évaluation globale du dossier, des enjeux et des marges d'action." },
+    { titre: "Identification des blocages", texte: "Repérage des freins, incohérences ou obstacles." },
+    { titre: "Structuration du dossier", texte: "Organisation claire des éléments et des priorités." },
+    { titre: "Conseil stratégique", texte: "Définition d'une ligne d'action adaptée." },
+    { titre: "Accompagnement", texte: "Appui dans les démarches et leur organisation." },
+    { titre: "Coordination", texte: "Mobilisation de compétences complémentaires si nécessaire." },
   ],
   methode: {
     titre: "Méthode",
     etapes: [
-      {
-        num: "1",
-        titre: "Prise de contact confidentielle",
-        texte: "Analyse initiale de la demande.",
-      },
-      {
-        num: "2",
-        titre: "Étude du dossier",
-        texte: "Lecture approfondie de la situation.",
-      },
-      {
-        num: "3",
-        titre: "Diagnostic",
-        texte: "Identification des enjeux et des possibilités réelles.",
-      },
-      {
-        num: "4",
-        titre: "Orientation",
-        texte: "Proposition d'un accompagnement si pertinent.",
-      },
+      { num: "1", titre: "Prise de contact confidentielle", texte: "Analyse initiale de la demande." },
+      { num: "2", titre: "Étude du dossier", texte: "Lecture approfondie de la situation." },
+      { num: "3", titre: "Diagnostic", texte: "Identification des enjeux et des possibilités réelles." },
+      { num: "4", titre: "Orientation", texte: "Proposition d'un accompagnement si pertinent." },
     ],
     note: "Toutes les situations ne donnent pas lieu à une intervention.",
   },
 };
 
-// ─── PAGE SITUATIONS ACCOMPAGNÉES ────────────────────────────
 export const situations = {
   label: "Situations accompagnées",
   titre: "Nous intervenons notamment dans les situations suivantes",
@@ -266,12 +186,10 @@ export const situations = {
   ],
 };
 
-// ─── PAGE SOUMETTRE UNE DEMANDE ──────────────────────────────
 export const soumettredemande = {
   label: "Soumettre une demande",
   titre: "Soumettre une demande confidentielle",
-  texte:
-    "Chaque demande fait l'objet d'une première analyse confidentielle. Cette étape permet d'évaluer la nature de la situation et la pertinence d'un accompagnement. Toutes les demandes ne donnent pas lieu à une intervention.",
+  texte: "Chaque demande fait l'objet d'une première analyse confidentielle. Cette étape permet d'évaluer la nature de la situation et la pertinence d'un accompagnement. Toutes les demandes ne donnent pas lieu à une intervention.",
   message: "Une réponse vous sera apportée dans les meilleurs délais.",
   formulaire: {
     nom: "Nom",
@@ -285,40 +203,35 @@ export const soumettredemande = {
   },
 };
 
-// ─── PAGE FAQ ────────────────────────────────────────────────
 export const faq = {
   label: "Questions fréquentes",
   titre: "FAQ",
   questions: [
-    {
-      question: "Garantissez-vous un résultat ?",
-      reponse:
-        "Non. Chaque situation dépend de nombreux paramètres. Notre rôle est de structurer, analyser et orienter — jamais de promettre un résultat spécifique.",
-    },
-    {
-      question: "Êtes-vous avocat ?",
-      reponse:
-        "Non. Notre rôle est un accompagnement et un travail de conseil. Nous disposons d'un vivier d'avocats tous spécialisés dans leurs matières, car on ne peut pas être avocat et tout faire : chacun a un scope précis.",
-    },
-    {
-      question: "Intervenez-vous auprès des institutions ?",
-      reponse:
-        "Notre travail consiste à analyser, structurer et orienter les situations dans un cadre adapté, puis à intervenir lorsque cela est pertinent.",
-    },
+    { question: "Garantissez-vous un résultat ?", reponse: "Non. Chaque situation dépend de nombreux paramètres. Notre rôle est de structurer, analyser et orienter — jamais de promettre un résultat spécifique." },
+    { question: "Êtes-vous avocat ?", reponse: "Non. Notre rôle est un accompagnement et un travail de conseil. Nous disposons d'un vivier d'avocats tous spécialisés dans leurs matières, car on ne peut pas être avocat et tout faire : chacun a un scope précis." },
+    { question: "Intervenez-vous auprès des institutions ?", reponse: "Notre travail consiste à analyser, structurer et orienter les situations dans un cadre adapté, puis à intervenir lorsque cela est pertinent." },
   ],
 };
 
-// ─── PAGE CONTACT ────────────────────────────────────────────
 export const contactPage = {
   label: "Contact",
   titre: "Prendre contact",
-  texte:
-    "Pour toute demande d'information ou pour soumettre une situation, vous pouvez nous contacter par les moyens suivants.",
+  texte: "Pour toute demande d'information ou pour soumettre une situation, vous pouvez nous contacter par les moyens suivants.",
 };
 
-// ─── PAGE MENTIONS LÉGALES ───────────────────────────────────
 export const mentionsLegales = {
   label: "Mentions légales",
   titre: "Mentions légales",
-  contenu: "(À compléter)",
+  editeur: {
+    titre: "Éditeur du site",
+    lignes: [
+      "Oppenheimer Conseil est la marque de conseil de la société Oppenheimer Media",
+      "OPPENHEIMER MEDIA SAS",
+      "Société par actions simplifiée unipersonnelle",
+      "Siège social : 48 rue de Sèvres, 75007 Paris – France",
+      "Immatriculée au RCS de Paris sous le numéro 931 755 102",
+      "SIRET : 931 755 102 00015",
+      "TVA intracommunautaire : FR22 931 755 102",
+    ],
+  },
 };
