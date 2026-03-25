@@ -25,6 +25,33 @@ export const team = {
   },
 };
 
+export const avocats = [
+  {
+    nom: "Julien Ayoun",
+    titre: "Avocat en droit des affaires et droit immobilier",
+    photo: "/ayoun.jpg",
+    bio: "",
+  },
+  {
+    nom: "Olivier Le Mailloux",
+    titre: "Avocat au barreau de Marseille",
+    photo: "/lemailloux.jpg",
+    bio: "Après avoir enseigné à la Faculté de Droit d'Aix-en-Provence, Olivier Le Mailloux choisit, en 2012, d'intégrer le barreau de Marseille. Premier Secrétaire de la Conférence, il est actuellement Membre du Conseil de l'Ordre du barreau de Marseille. Ses domaines d'intervention sont essentiellement axés sur le droit pénal, les défenses des libertés fondamentales et le droit public. En outre, Membre de la liste de défense pénale d'urgence, il est Vice-président de la Commission Droits de l'homme du barreau de Marseille.",
+  },
+  {
+    nom: "Béatrice Dubreuil",
+    titre: "Avocate à la cour",
+    photo: "/dubreuil.jpg",
+    bio: "Titulaire d'un DEA de droit de la propriété intellectuelle (Paris II), Béatrice Dubreuil intervient auprès d'une clientèle d'entreprises privées françaises et internationales, et de particuliers, notamment en droit de la presse, droit des marques, dessins et modèles, droit de la propriété littéraire artistique, droit du cinéma, droit de l'audiovisuel, droit de l'informatique. Béatrice Dubreuil a également développé une expertise en droit pénal, en droit social, en droit de la concurrence et de la distribution au sein de grands cabinets français dans lesquels elle a collaboré.",
+  },
+  {
+    nom: "Jean-Philippe Morel",
+    titre: "Avocat au barreau de Dijon",
+    photo: "/morel.jpg",
+    bio: "Avocat français inscrit au barreau de Dijon, reconnu pour son engagement en droit pénal. Membre du conseil de l'ordre des avocats. Il intervient principalement dans la défense pénale, les affaires criminelles et correctionnelles, et l'assistance des victimes. Régulièrement sollicité pour des affaires médiatisées en Bourgogne, il est apprécié pour sa rigueur juridique, sa combativité à l'audience et sa proximité avec ses clients.",
+  },
+];
+
 export const accueil = {
   hero: {
     label: "Accompagnement stratégique",

@@ -18,7 +18,7 @@ export default function Navigation() {
     <nav className="bg-cream/95 backdrop-blur-sm border-b border-beige/40 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between h-18 lg:h-22">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo.png" alt="Oppenheimer Conseil" width={48} height={48} className="w-10 h-10 lg:w-12 lg:h-12" />
+          <Image src="/logo.png" alt="Oppenheimer Conseil" width={56} height={56} className="w-12 h-12 lg:w-14 lg:h-14" />
           <span className="hidden sm:block text-xs lg:text-sm font-medium tracking-[0.2em] uppercase text-charcoal">
             Oppenheimer Conseil
           </span>
