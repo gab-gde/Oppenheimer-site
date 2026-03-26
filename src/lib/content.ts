@@ -30,7 +30,7 @@ export const avocats = [
     nom: "Julien Ayoun",
     titre: "Avocat en droit des affaires et droit immobilier",
     photo: "/ayoun.jpg",
-    bio: "",
+    bio: "Le cabinet de Maître Julien Ayoun vous conseille et défend entre autres en droit immobilier et vous assiste notamment au cours des opérations d'expertise judiciaire en matière immobilière. L'expertise immobilière concerne les litiges liés aux bâtiments et aux propriétés immobilières. Elle peut être utilisée dans le cadre de procédures judiciaires, c'est-à-dire lorsqu'un tribunal a été saisi préalablement pour désigner l'expert judiciaire, pour évaluer par exemple la valeur d'une propriété immobilière, ou pour déterminer les causes d'un dommage ou pour résoudre des litiges liés à des questions de droit immobilier. Ce sera également le cas en matière de vices cachés.",
   },
   {
     nom: "Olivier Le Mailloux",
